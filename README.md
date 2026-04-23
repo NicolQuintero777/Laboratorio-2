@@ -53,8 +53,11 @@ Es un sistema de interfaz gráfica de usuario (GUI). El objetivo es demostrar c�
 
 ## 2. Componentes 
 Arduino Uno: Actúa como el motor del juego, calculando la física del movimiento y las colisiones
+
 Pantalla OLED SSD1306: Es el periférico de salida, tiene una resolución de 128x64 pixeles y utiliza luz propia
+
 Protocolo I2C: Es el sistema de comunicación que usa solo 2 cables de datos (SDA en A4 y SCL en A5) para enviar toda la información visual
+
 Puerto Serial: Funciona como el control remoto o mando del juego a través del teclado del PC
 
 ## 3. ¿Cómo funciona el código? (Lógica)
