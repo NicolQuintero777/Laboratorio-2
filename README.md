@@ -26,11 +26,24 @@ Escucha Activa: El Arduino está constantemente preguntando: "¿Me escribieron a
 
 Procesamiento y Acción: Es el motor de decisiones.Si el texto es "luz encendida", envía energía a los pines 12 y 13.Si es "temp", detiene lo que está haciendo, le pide el dato al sensor DHT22 y nos lo devuelve escrito en pantalla.
 
+<img width="900" height="400" alt="image" src="https://github.com/user-attachments/assets/0938f308-b375-4e79-b583-4004c6960bd7" />
+
+
 ## 4. Flujo de Datos
 Entrada: El usuario escribe un comando en la PC.
 
-Procesamiento: El Arduino recibe el mensaje, lo limpia (trim) y lo compara con sus comandos guardados
+Procesamiento: El Arduino recibe el mensaje, lo limpia y lo compara con sus comandos guardados
 
 Salida: El sistema responde de dos formas: física (prendiendo LEDs) o informativa (enviando texto de vuelta con la temperatura).
+
+<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/27990c0c-02f8-4605-a5e3-1214f06bfa82" />
+
+<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/47611505-f372-4018-a059-0e4849ae92aa" />
+
+<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/9e0cd59a-fe30-42d7-b8bd-ab9754a3e0f3" />
+
+
+
+
 
 
