@@ -61,15 +61,18 @@ Protocolo I2C: Es el sistema de comunicación que usa solo 2 cables de datos (SD
 Puerto Serial: Funciona como el control remoto o mando del juego a través del teclado del PC
 
 ## 3. ¿Cómo funciona el código? (Lógica)
-El código utiliza un ciclo de renderizado similar al de las consolas de videojuegos profesionales:
-Inicialización (setup): Configura la comunicación serial a alta velocidad (115200 baudios) y "despierta" la pantalla. Si la pantalla no responde, el código se detiene para evitar errores.
-El "Oído" del Jugador (Serial.available): El programa revisa si presionaste una tecla. Si envías una 'a', resta posición al eje X (izquierda); si envías una 'd', suma posición (derecha).
-Física del Juego: El objeto que cae aumenta su posición en el eje Y constantemente. Cuando llega al final de la pantalla (64 píxeles), se reinicia arriba en una posición aleatoria (random) y te suma un punto.
-Refresco de Pantalla: En cada vuelta del ciclo, el Arduino hace tres cosas:
-Borra todo lo que había (clearDisplay).
-Dibuja las nuevas posiciones de la nave y el objeto.
+Es un minijuego arcade que corre en un Arduino UNO con una pantalla OLED de 128x64 píxeles, simulado en Wokwi. El programa usa tres librerías: Wire.h para la comunicación I2C, y Adafruit_GFX.h junto con Adafruit_SSD1306.h para controlar la pantalla.
 
-Muestra el resultado final (display).
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/8f6184c7-0294-43f4-b6a7-a6a85f3ad741" />
+
+Al iniciar, el programa establece las posiciones de inicio: la nave del jugador aparece cerca del centro en la parte inferior de la pantalla, y un objeto enemigo empieza a caer desde la parte superior. También inicializa el puerto serial a 115200 baudios para recibir los controles del jugador, y verifica que la pantalla OLED esté bien conectada por I2C, si no la encuentra, el programa se detiene con un mensaje de error.
+
+Durante el juego, el jugador controla la nave escribiendo letras en el Monitor Serial: la tecla "a" mueve la nave hacia la izquierda y la tecla "d" la mueve hacia la derecha, cada pulsación desplaza la nave 8 píxeles. El código también limita el movimiento para que la nave no se salga de los bordes de la pantalla.
+Al mismo tiempo, el objeto enemigo va cayendo desde arriba hacia abajo de manera continua. Si el jugador logra esquivarlo o reaccionar correctamente, el puntaje aumenta y el objeto reaparece en una nueva posición aleatoria en la parte superior, ese comportamiento aleatorio es posible gracias al randomSeed que se configuró al inicio con analogRead.
+Todo esto se dibuja en tiempo real sobre la pantalla OLED  se puede ver el objeto como un punto blanco moviéndose, la nave como una pequeña línea en la parte inferior, y el marcador "Puntos:" actualizado en cada ciclo
+
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/0a92344d-0867-40d9-b360-b91dc5eedbed" />
+
 
 ## 4. Flujo de Datos
 Entrada: Carácter ASCII enviado desde el Monitor Serial.
