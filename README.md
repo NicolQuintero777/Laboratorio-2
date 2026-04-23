@@ -105,7 +105,7 @@ Es un sistema de seguridad con sensor de movimiento PIR hecho en Arduino UNO y s
 
 Cuando el sistema arranca, primero imprime en el monitor serial un encabezado con el nombre del proyecto y avisa que el sensor está calibrando, lo cual es normal en los sensores PIR ya que necesitan unos segundos para estabilizarse antes de empezar a funcionar correctamente. Una vez calibrado, el programa entra en un ciclo que se repite indefinidamente cada medio segundo, leyendo constantemente el estado del sensor
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/8d40902a-e311-4b66-a409-a8fa5248a869" />
+<img width="600" height="400" alt="image" src="https://github.com/user-attachments/assets/8d40902a-e311-4b66-a409-a8fa5248a869" />
 
 
 Si el sensor detecta movimiento, su pin de salida se pone en HIGH, el Arduino recibe esa señal, enciende el LED rojo y manda el mensaje de alerta al monitor serial avisando que hay un intruso en el área. Si por el contrario no hay ningún movimiento, el pin regresa a LOW, el LED se apaga y el monitor muestra que la zona está segura y despejada.
