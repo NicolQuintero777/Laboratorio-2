@@ -45,6 +45,14 @@ Salida: El sistema responde de dos formas: física (prendiendo LEDs) o informati
 ## TEMPERATURA
 <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/9e0cd59a-fe30-42d7-b8bd-ab9754a3e0f3" />
 
+<img width="500" height="400" alt="WhatsApp Image 2026-04-22 at 21 32 29" src="https://github.com/user-attachments/assets/f0b8f536-0c40-4878-a5f7-e7e2812720a5" />
+
+<img width="700" height="400" alt="WhatsApp Image 2026-04-22 at 21 32 30" src="https://github.com/user-attachments/assets/8d6cbc09-5819-4c1d-b384-4357015276a5" />
+
+
+
+
+
 
 # DESARROLLAR UN JUEGO SENCILLO EN UNA OLED UTILIZANDO ARDUINO
 
@@ -112,7 +120,8 @@ Si el sensor detecta movimiento, su pin de salida se pone en HIGH, el Arduino re
 
 <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/911d16cc-e971-4604-ba44-958ca4c6e248" />
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/f0d9b066-6a29-48a1-b299-80ab640a37ab" />
+<img width="500" height="400" alt="WhatsApp Image 2026-04-15 at 14 43 22" src="https://github.com/user-attachments/assets/3662e498-9698-49c4-87d6-46f96aeb5ec0" />
+
 
 
 Este proyecto es una aplicación real de lo que vemos en la vida cotidiana, como las luces automáticas de los pasillos o las puertas de los centros comerciales.
