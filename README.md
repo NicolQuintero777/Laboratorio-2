@@ -60,7 +60,7 @@ Protocolo I2C: Es el sistema de comunicación que usa solo 2 cables de datos (SD
 
 Puerto Serial: Funciona como el control remoto o mando del juego a través del teclado del PC
 
-## 3. ¿Cómo funciona el código? (Lógica)
+## 3. ¿Cómo funciona el código? 
 Es un minijuego arcade que corre en un Arduino UNO con una pantalla OLED de 128x64 píxeles, simulado en Wokwi. El programa usa tres librerías: Wire.h para la comunicación I2C, y Adafruit_GFX.h junto con Adafruit_SSD1306.h para controlar la pantalla.
 
 <img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/8f6184c7-0294-43f4-b6a7-a6a85f3ad741" />
@@ -82,5 +82,41 @@ Procesamiento: El Arduino actualiza las coordenadas matemáticas en la memoria R
 Salida: Envío de paquetes de datos por el bus I2C hacia la pantalla para iluminar los píxeles correspondientes.
 
 
+## DESARROLLAR UN DETECTOR DE COLORES MEDIANTE EL SENSOR CNY70 Y EL USO DE ARDUINO
+
+## 1. ¿Qué es este proyecto?
+Es un Sistema de Seguridad Automatizado. Su función es monitorear un área específica y activar una respuesta inmediata cuando detecta la presencia de un cuerpo en movimiento a través de radiación infrarroja
+
+## 2. Componentes
+Arduino Uno: Es el cerebro que recibe la señal del sensor y decide cuando activar la alarma
+
+Sensor de movimiento PIR: El componente de entrada detecta cambios en el calor del ambiente
+
+LED Rojo: El componente de salida proporciona una señal de alerta visual instantánea
+
+Resistencia 220: Protege al LED para que no se queme del voltaje del Arduino 
+
+Monitor Serial: Interfaz de software donde se registra el historial de detecciones con fecha y mensaje
+
+## 3. ¿Cómo funciona el código? 
+
+Es un sistema de seguridad con sensor de movimiento PIR hecho en Arduino UNO y simulado en Wokwi, el circuito tiene tres componentes principales: el Arduino como cerebro del sistema, un sensor PIR conectado al pin 2 que detecta presencia humana a través del calor infrarrojo que emite el cuerpo, y un LED rojo conectado al pin 13 con una resistencia que funciona como alarma visual
+
+
+Cuando el sistema arranca, primero imprime en el monitor serial un encabezado con el nombre del proyecto y avisa que el sensor está calibrando, lo cual es normal en los sensores PIR ya que necesitan unos segundos para estabilizarse antes de empezar a funcionar correctamente. Una vez calibrado, el programa entra en un ciclo que se repite indefinidamente cada medio segundo, leyendo constantemente el estado del sensor
+
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/8d40902a-e311-4b66-a409-a8fa5248a869" />
+
+
+Si el sensor detecta movimiento, su pin de salida se pone en HIGH, el Arduino recibe esa señal, enciende el LED rojo y manda el mensaje de alerta al monitor serial avisando que hay un intruso en el área. Si por el contrario no hay ningún movimiento, el pin regresa a LOW, el LED se apaga y el monitor muestra que la zona está segura y despejada.
+
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/911d16cc-e971-4604-ba44-958ca4c6e248" />
+
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/f0d9b066-6a29-48a1-b299-80ab640a37ab" />
+
+
+Este proyecto es una aplicación real de lo que vemos en la vida cotidiana, como las luces automáticas de los pasillos o las puertas de los centros comerciales.
+
+Aunque en un laboratorio físico usaríamos un sensor pequeño como el CNY70 (que es de corto alcance), el uso del sensor PIR en esta simulación nos permite entender cómo funcionan los Sistemas de Seguridad Perimetral, donde lo más importante es la velocidad de respuesta desde que el sensor capta el movimiento hasta que el LED se enciende
 
 
