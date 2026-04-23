@@ -45,9 +45,14 @@ Salida: El sistema responde de dos formas: física (prendiendo LEDs) o informati
 ## TEMPERATURA
 <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/9e0cd59a-fe30-42d7-b8bd-ab9754a3e0f3" />
 
+## MODO FISICO 
+
 <img width="500" height="400" alt="WhatsApp Image 2026-04-22 at 21 32 29" src="https://github.com/user-attachments/assets/f0b8f536-0c40-4878-a5f7-e7e2812720a5" />
 
 <img width="700" height="400" alt="WhatsApp Image 2026-04-22 at 21 32 30" src="https://github.com/user-attachments/assets/8d6cbc09-5819-4c1d-b384-4357015276a5" />
+
+
+https://github.com/user-attachments/assets/8ac13dfb-7d7f-419c-a5a4-554681d456e1
 
 
 
