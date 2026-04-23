@@ -36,11 +36,14 @@ Procesamiento: El Arduino recibe el mensaje, lo limpia y lo compara con sus coma
 
 Salida: El sistema responde de dos formas: física (prendiendo LEDs) o informativa (enviando texto de vuelta con la temperatura).
 
-<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/27990c0c-02f8-4605-a5e3-1214f06bfa82" />
+## LUZ ENCENDIDA
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/27990c0c-02f8-4605-a5e3-1214f06bfa82" />
 
-<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/47611505-f372-4018-a059-0e4849ae92aa" />
+## LUZ APAGADA
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/47611505-f372-4018-a059-0e4849ae92aa" />
 
-<img width="600" height="500" alt="image" src="https://github.com/user-attachments/assets/9e0cd59a-fe30-42d7-b8bd-ab9754a3e0f3" />
+## TEMPERATURA
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/9e0cd59a-fe30-42d7-b8bd-ab9754a3e0f3" />
 
 
 
