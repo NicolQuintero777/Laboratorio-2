@@ -63,7 +63,7 @@ Puerto Serial: Funciona como el control remoto o mando del juego a través del t
 ## 3. ¿Cómo funciona el código? (Lógica)
 Es un minijuego arcade que corre en un Arduino UNO con una pantalla OLED de 128x64 píxeles, simulado en Wokwi. El programa usa tres librerías: Wire.h para la comunicación I2C, y Adafruit_GFX.h junto con Adafruit_SSD1306.h para controlar la pantalla.
 
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/8f6184c7-0294-43f4-b6a7-a6a85f3ad741" />
+<img width="500" height="700" alt="image" src="https://github.com/user-attachments/assets/8f6184c7-0294-43f4-b6a7-a6a85f3ad741" />
 
 Al iniciar, el programa establece las posiciones de inicio: la nave del jugador aparece cerca del centro en la parte inferior de la pantalla, y un objeto enemigo empieza a caer desde la parte superior. También inicializa el puerto serial a 115200 baudios para recibir los controles del jugador, y verifica que la pantalla OLED esté bien conectada por I2C, si no la encuentra, el programa se detiene con un mensaje de error.
 
