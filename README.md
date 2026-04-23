@@ -46,7 +46,7 @@ Salida: El sistema responde de dos formas: física (prendiendo LEDs) o informati
 <img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/9e0cd59a-fe30-42d7-b8bd-ab9754a3e0f3" />
 
 
-## DESARROLLAR UN JUEGO SENCILLO EN UNA OLED UTILIZANDO ARDUINO
+# DESARROLLAR UN JUEGO SENCILLO EN UNA OLED UTILIZANDO ARDUINO
 
 ## 1. ¿Qué es este proyecto?
 Es un sistema de interfaz gráfica de usuario (GUI). El objetivo es demostrar cómo un microcontrolador puede procesar datos de entrada (teclado) y generar una respuesta visual compleja en tiempo real sobre una pantalla de tecnología OLED.
@@ -82,7 +82,7 @@ Procesamiento: El Arduino actualiza las coordenadas matemáticas en la memoria R
 Salida: Envío de paquetes de datos por el bus I2C hacia la pantalla para iluminar los píxeles correspondientes.
 
 
-## DESARROLLAR UN DETECTOR DE COLORES MEDIANTE EL SENSOR CNY70 Y EL USO DE ARDUINO
+# DESARROLLAR UN DETECTOR DE COLORES MEDIANTE EL SENSOR CNY70 Y EL USO DE ARDUINO
 
 ## 1. ¿Qué es este proyecto?
 Es un Sistema de Seguridad Automatizado. Su función es monitorear un área específica y activar una respuesta inmediata cuando detecta la presencia de un cuerpo en movimiento a través de radiación infrarroja
