@@ -86,12 +86,11 @@ Cuando la cabeza de la serpiente llega a la posición de la comida, la longitud 
 
 
 ## 4. Flujo de Datos
-Entrada: Carácter ASCII enviado desde el Monitor Serial.
+Entrada: Carácter ASCII enviado desde el teclado (w, a, s, d) a través del Monitor Serial por conexión USB.
 
-Procesamiento: El Arduino actualiza las coordenadas matemáticas en la memoria RAM.
+Procesamiento: El Arduino lee el carácter, actualiza las variables de dirección dirX y dirY en la memoria RAM, desplaza todas las coordenadas del arreglo snakeX[] y snakeY[], verifica colisión con bordes y detecta si la cabeza coincide con la posición de la comida.
 
-Salida: Envío de paquetes de datos por el bus I2C hacia la pantalla para iluminar los píxeles correspondientes.
-
+Salida: Envío de paquetes de datos por el bus I2C hacia la pantalla OLED SSD1306 para iluminar los píxeles correspondientes a la serpiente y la comida, actualizando el fotograma cada 100 milisegundos.
 
 # DESARROLLAR UN DETECTOR DE COLORES MEDIANTE EL SENSOR CNY70 Y EL USO DE ARDUINO
 
