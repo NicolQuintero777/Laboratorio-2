@@ -74,17 +74,15 @@ Protocolo I2C: Es el sistema de comunicación que usa solo 2 cables de datos (SD
 Puerto Serial: Funciona como el control remoto o mando del juego a través del teclado del PC
 
 ## 3. ¿Cómo funciona el código? 
-Es un minijuego arcade que corre en un Arduino UNO con una pantalla OLED de 128x64 píxeles, simulado en Wokwi. El programa usa tres librerías: Wire.h para la comunicación I2C, y Adafruit_GFX.h junto con Adafruit_SSD1306.h para controlar la pantalla.
+Al arrancar, el programa inicializa la pantalla OLED por comunicación I2C y coloca la serpiente en el centro de la pantalla con una longitud inicial de 3 segmentos, cada uno representado por un cuadradito de 4x4 píxeles. También genera la primera comida en una posición aleatoria de la pantalla usando el ruido del pin analógico A0 como semilla para el generador de números aleatorios.
 
-<img width="700" height="300" alt="image" src="https://github.com/user-attachments/assets/8f6184c7-0294-43f4-b6a7-a6a85f3ad741" />
+<img width="953" height="684" alt="image" src="https://github.com/user-attachments/assets/a8ee4d58-e38d-4125-9d68-133bf69f51f6" />
 
-Al iniciar, el programa establece las posiciones de inicio: la nave del jugador aparece cerca del centro en la parte inferior de la pantalla, y un objeto enemigo empieza a caer desde la parte superior. También inicializa el puerto serial a 115200 baudios para recibir los controles del jugador, y verifica que la pantalla OLED esté bien conectada por I2C, si no la encuentra, el programa se detiene con un mensaje de error.
+El control del juego funciona a través del Monitor Serial: el jugador escribe las teclas w para subir, s para bajar, a para ir a la izquierda y d para ir a la derecha. El código tiene una protección importante que impide que la serpiente se doble sobre sí misma, por ejemplo si va hacia la derecha no puede girar directamente a la izquierda. También ignora los saltos de línea que envía el teclado para que no interfieran con el juego.
+El movimiento de la serpiente funciona de forma encadenada: en cada ciclo, cada segmento del cuerpo toma la posición del segmento que tiene delante, y la cabeza avanza 4 píxeles en la dirección actual. Esto crea el efecto visual de que toda la serpiente se desplaza suavemente. El ciclo completo se repite cada 100 milisegundos, lo que define la velocidad del juego.
 
-Durante el juego, el jugador controla la nave escribiendo letras en el Monitor Serial: la tecla "a" mueve la nave hacia la izquierda y la tecla "d" la mueve hacia la derecha, cada pulsación desplaza la nave 8 píxeles. El código también limita el movimiento para que la nave no se salga de los bordes de la pantalla.
-Al mismo tiempo, el objeto enemigo va cayendo desde arriba hacia abajo de manera continua. Si el jugador logra esquivarlo o reaccionar correctamente, el puntaje aumenta y el objeto reaparece en una nueva posición aleatoria en la parte superior, ese comportamiento aleatorio es posible gracias al randomSeed que se configuró al inicio con analogRead.
-Todo esto se dibuja en tiempo real sobre la pantalla OLED  se puede ver el objeto como un punto blanco moviéndose, la nave como una pequeña línea en la parte inferior, y el marcador "Puntos:" actualizado en cada ciclo
-
-<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/0a92344d-0867-40d9-b360-b91dc5eedbed" />
+Cuando la cabeza de la serpiente llega a la posición de la comida, la longitud aumenta en uno, el Monitor Serial imprime el nuevo tamaño y aparece una nueva comida en otra posición aleatoria de la pantalla. Si en cambio la cabeza sale de los límites de la pantalla, ya sea por arriba, abajo, izquierda o derecha, el juego termina, se muestra el mensaje "GAME OVER" en letras grandes en la pantalla OLED, se imprime en el serial y el programa se detiene por completo hasta que se reinicie el Arduino
+<img width="958" height="683" alt="image" src="https://github.com/user-attachments/assets/08eec895-795d-4413-b965-6cbbc9bb496d" />
 
 
 ## 4. Flujo de Datos
