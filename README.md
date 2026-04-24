@@ -130,4 +130,14 @@ Este proyecto es una aplicación real de lo que vemos en la vida cotidiana, como
 
 Aunque en un laboratorio físico usaríamos un sensor pequeño como el CNY70 (que es de corto alcance), el uso del sensor PIR en esta simulación nos permite entender cómo funcionan los Sistemas de Seguridad Perimetral, donde lo más importante es la velocidad de respuesta desde que el sensor capta el movimiento hasta que el LED se enciende
 
+<img width="500" height="400" alt="WhatsApp Image 2026-04-23 at 20 25 53" src="https://github.com/user-attachments/assets/a3caea10-3d2e-45a6-9a9c-66bc9f653521" />
+
+<img width="261" height="442" alt="WhatsApp Image 2026-04-23 at 20 25 38" src="https://github.com/user-attachments/assets/dc617a56-3ea8-49ed-9aae-50edfb34b7f6" />
+
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/6fa877a0-8b8f-4ccb-b436-99cf8f11ef2f" />
+
+<img width="500" height="400" alt="image" src="https://github.com/user-attachments/assets/d75e18aa-d24e-4947-8e28-b44e12c7dc2e" />
+
+
+
 
